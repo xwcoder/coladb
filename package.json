@@ -1,6 +1,6 @@
 {
   "name": "coladb",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A small library for using IndexedDB in Promise style.",
   "keywords": [
     "IndexedDB",

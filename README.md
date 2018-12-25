@@ -33,7 +33,7 @@ async function insertUser (user = {}) {
   const id = await store.add(user)
 }
 ```
-Use as script in your html file. Import `dist/coladb.js` to your project, export as global variable named `colaDB`:
+Use as script in html file. Import `dist/coladb.js` to your project, export as global variable named `colaDB`:
 ```html
 <script src="path/to/coladb.js"></script>
 <script>
