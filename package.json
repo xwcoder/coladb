@@ -1,0 +1,61 @@
+{
+  "name": "coladb",
+  "version": "1.0.0",
+  "description": "A small library for using `IndexedDB` in `Promise` style.",
+  "keywords": [
+    "IndexedDB",
+    "promise",
+    "promised IndexedDB",
+    "coladb",
+    "colaDB"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "predist:lib": "rm -rf ./lib",
+    "dist:lib": "tsc",
+    "predist:client": "rm -rf ./dist",
+    "dist:client": "webpack",
+    "dist": "npm run dist:lib && npm run dist:client",
+    "lint": "tslint --project tsconfig.json",
+    "karma:start": "karma start",
+    "karma:run": "karma run"
+  },
+  "pre-commit": ["lint"],
+  "author": {
+    "name": "creep",
+    "email": "creep.wei@gmail.com"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "lib/**/*",
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xwcoder/coladb.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^3.3.4",
+    "@types/node": "^10.12.12",
+    "jasmine": "^3.3.1",
+    "karma": "^3.1.4",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.2",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-safari-launcher": "^1.0.0",
+    "karma-webpack": "^3.0.5",
+    "pre-commit": "^1.2.2",
+    "ts-loader": "^5.3.1",
+    "tslint": "^5.11.0",
+    "tslint-config-ilemon": "^0.1.1",
+    "typescript": "^3.2.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {}
+}
