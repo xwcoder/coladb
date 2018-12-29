@@ -96,7 +96,6 @@ describe('Index', () => {
     expect(cursor.primaryKey).toEqual(1)
     expect(cursor.source instanceof IDBIndex).toBeTruthy()
     expect(cursor.key).toEqual('user-0')
-    expect(user.id).toEqual(1)
-    expect(user.name).toEqual('user-0')
+    expect(user).toBeUndefined()
   })
 })

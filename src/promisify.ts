@@ -40,7 +40,7 @@ export const createPromisifyOpenCursorMthods = (obj: IDBObjectStore | IDBIndex) 
     },
 
     async openKeyCursor (range?: keyType, direction?: IDBCursorDirection): Promise<IDBCursorWithValue> {
-      const request = obj.openCursor(range, direction)
+      const request = obj.openKeyCursor(range, direction)
       const cursor = await promiseifyRequest(request)
       return Cursor(cursor, request)
     }

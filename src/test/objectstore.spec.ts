@@ -187,15 +187,13 @@ describe('ObjectStore', () => {
 
     expect(cursor.source instanceof IDBObjectStore).toBeTruthy()
     expect(cursor.key).toEqual(1)
-    expect(user.id).toEqual(1)
-    expect(user.name).toEqual('user-0')
+    expect(user).toBeUndefined()
 
     cursor = await cursor.continue()
     user = cursor.value
 
     expect(cursor.source instanceof IDBObjectStore).toBeTruthy()
     expect(cursor.key).toEqual(2)
-    expect(user.id).toEqual(2)
-    expect(user.name).toEqual('user-1')
+    expect(user).toBeUndefined()
   })
 })
